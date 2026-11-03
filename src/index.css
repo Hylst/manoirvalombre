@@ -1,0 +1,185 @@
+@import "tailwindcss";
+
+@theme {
+  --font-title: "Creepster", "Chiller", fantasy;
+  --font-body: "Cormorant Garamond", "Georgia", serif;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  background: #07030c;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  color: #f6e3b4;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.font-title {
+  font-family: var(--font-title);
+  letter-spacing: 0.04em;
+}
+
+/* ---------- Scène ---------- */
+.hot {
+  cursor: pointer;
+  transition: filter 0.2s;
+}
+.hot:hover {
+  filter: brightness(1.45) drop-shadow(0 0 5px rgba(255, 178, 70, 0.9));
+}
+
+.flame {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: flame 0.45s ease-in-out infinite alternate;
+}
+.flame.f2 {
+  animation-duration: 0.33s;
+  animation-delay: -0.2s;
+}
+.flame.f3 {
+  animation-duration: 0.52s;
+  animation-delay: -0.1s;
+}
+@keyframes flame {
+  0% {
+    transform: scale(1, 1) skewX(-4deg);
+  }
+  100% {
+    transform: scale(0.88, 1.18) skewX(5deg);
+  }
+}
+
+.wing {
+  transform-box: fill-box;
+  transform-origin: 100% 60%;
+  animation: flap 0.5s ease-in-out infinite alternate;
+}
+.wing.right {
+  transform-origin: 0% 60%;
+}
+@keyframes flap {
+  0% {
+    transform: scaleY(1) rotate(0deg);
+  }
+  100% {
+    transform: scaleY(0.45) rotate(6deg);
+  }
+}
+
+.bob {
+  animation: bob 3.2s ease-in-out infinite;
+}
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+.swing {
+  transform-box: fill-box;
+  transform-origin: 50% 0%;
+  animation: swing 2.4s ease-in-out infinite alternate;
+}
+@keyframes swing {
+  0% {
+    transform: rotate(-9deg);
+  }
+  100% {
+    transform: rotate(9deg);
+  }
+}
+
+.dangle {
+  animation: dangle 4s ease-in-out infinite;
+}
+@keyframes dangle {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(14px);
+  }
+}
+
+.eye-glow {
+  animation: eyeglow 3s ease-in-out infinite;
+}
+@keyframes eyeglow {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* ---------- Interface ---------- */
+.fade-in {
+  animation: fadeIn 0.5s ease both;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.late-fade {
+  animation: fadeIn 1.6s ease 1.4s both;
+}
+
+.shake {
+  animation: shake 0.4s;
+}
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-8px);
+  }
+  40% {
+    transform: translateX(7px);
+  }
+  60% {
+    transform: translateX(-5px);
+  }
+  80% {
+    transform: translateX(4px);
+  }
+}
+
+.lantern-flame {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: flame 0.4s ease-in-out infinite alternate;
+}
+
+.glow-text {
+  text-shadow: 0 0 12px rgba(255, 140, 30, 0.7), 0 0 30px rgba(255, 90, 0, 0.35);
+}
+
+.paper {
+  background: radial-gradient(circle at 30% 20%, #f1e2b8, #d9c18a 70%, #b99a5e);
+  color: #3b2410;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7), inset 0 0 40px rgba(110, 70, 20, 0.45);
+}
