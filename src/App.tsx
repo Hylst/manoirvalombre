@@ -1,3 +1,4 @@
+import { InfoModal } from './components/InfoModal';
 import { useCallback, useEffect, useRef, useState } from "react";
 import Scene, { type Flags, type Hover } from "./components/Scene";
 import Lantern from "./components/Lantern";
@@ -79,6 +80,7 @@ function pad(n: number) {
 }
 
 export default function App() {
+  const [showInfo, setShowInfo] = useState(false);
   const [phase, setPhase] = useState<Phase>("intro");
   const [wax, setWax] = useState(WAX_MAX);
   const [tick, setTick] = useState(0);
@@ -476,7 +478,7 @@ export default function App() {
 
       {/* Intro */}
       {phase === "intro" && (
-        <div className="fixed inset-0 z-40 flex items-center justify-center bg-[radial-gradient(ellipse_at_center,#2a1238ee,#050208f5)] p-4">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-[radial-gradient(ellipse_at_center,#2a1238ee,#050208f5)] p-4">
           <div className="fade-in max-w-xl text-center">
             <Lantern fraction={1} className="mx-auto h-36 w-28" />
             <h2 className="font-title glow-text mt-2 text-5xl text-orange-400 sm:text-7xl">La Lanterne de Courge</h2>
@@ -502,7 +504,7 @@ export default function App() {
 
       {/* Défaite */}
       {phase === "lost" && (
-        <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/95 p-4">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 p-4">
           <div className="late-fade max-w-lg text-center">
             <p className="text-7xl">💀</p>
             <h2 className="font-title mt-3 text-5xl text-red-500 sm:text-6xl">La flamme s'éteint…</h2>
@@ -518,7 +520,7 @@ export default function App() {
 
       {/* Victoire */}
       {phase === "won" && (
-        <div className="fixed inset-0 z-40 flex items-center justify-center bg-[radial-gradient(ellipse_at_center,#ffd98a,#7a3b10_60%,#1a0a05)] p-4">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-[radial-gradient(ellipse_at_center,#ffd98a,#7a3b10_60%,#1a0a05)] p-4">
           <div className="fade-in max-w-lg text-center text-[#2a1306]">
             <Lantern fraction={fraction} className="mx-auto h-32 w-24" />
             <h2 className="font-title mt-2 text-5xl text-[#5a1a05] sm:text-6xl">Liberté !</h2>
@@ -535,6 +537,18 @@ export default function App() {
           </div>
         </div>
       )}
-    </div>
+    
+      {/* Bouton Infos technique */}
+      <button
+        onClick={() => setShowInfo(true)}
+        className="fixed top-2.5 right-2.5 z-[100] flex items-center gap-1 rounded-lg border border-slate-700/60 bg-slate-900/80 px-2 py-1 text-xs text-amber-200 shadow-md backdrop-blur hover:bg-slate-800 transition cursor-pointer select-none"
+        title="Comment ce jeu a été fait"
+        aria-label="Infos sur le jeu"
+      >
+        <span>ℹ️</span>
+        <span className="hidden sm:inline">Infos</span>
+      </button>
+      <InfoModal isOpen={showInfo} onClose={() => setShowInfo(false)} />
+</div>
   );
 }
