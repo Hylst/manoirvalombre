@@ -16,5 +16,5 @@ Une aventure point and click immersive d'Halloween. Explore les pièces ténébr
 - 100% statique, sans serveur ni collecte de donnees
 
 ## Contact
-- Email : geoffroy.streit@gmail.com
+- Email : geoffroy.streit@ik.me
 - Plateforme : https://games.hylst.fr/
