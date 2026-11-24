@@ -327,7 +327,7 @@ export default function App() {
       <header className="flex w-full max-w-[1000px] items-center gap-3 sm:gap-5">
         <Lantern fraction={fraction} className={cn("h-14 w-12 shrink-0 sm:h-20 sm:w-16", fraction < 0.2 && "animate-pulse")} />
         <div className="min-w-0 flex-1">
-          <h1 className="font-title glow-text text-3xl leading-none text-orange-400 sm:text-5xl">La Lanterne de Courge</h1>
+          <h1 className="font-title glow-text text-3xl leading-none text-orange-400 sm:text-5xl">Manoir Valombre</h1>
           <div className="mt-2 flex items-center gap-3">
             <div className="h-3 flex-1 overflow-hidden rounded-full border border-amber-900/70 bg-black/60">
               <div
@@ -481,7 +481,7 @@ export default function App() {
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-[radial-gradient(ellipse_at_center,#2a1238ee,#050208f5)] p-4">
           <div className="fade-in max-w-xl text-center">
             <Lantern fraction={1} className="mx-auto h-36 w-28" />
-            <h2 className="font-title glow-text mt-2 text-5xl text-orange-400 sm:text-7xl">La Lanterne de Courge</h2>
+            <h2 className="font-title glow-text mt-2 text-5xl text-orange-400 sm:text-7xl">Manoir Valombre</h2>
             <p className="mt-4 text-lg leading-relaxed text-amber-100/90 sm:text-xl">
               La porte du manoir s'est refermée derrière vous. Dans le noir, une seule lumière : votre lanterne de courge,
               dont la bougie <b className="text-orange-300">fond à chaque seconde</b>.
