@@ -46,6 +46,7 @@ export const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onClose }) => {
           </p>
         </div>
 
+        <p className="px-4 pb-1 text-center text-[11px] text-slate-400">Créé par Geoffroy Streit (Hylst) avec l'aide d'une IA.</p>
         <div className="bg-slate-950 p-3 sm:p-4 text-center border-t border-slate-800">
           <button
             onClick={onClose}

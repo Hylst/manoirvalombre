@@ -9,3 +9,7 @@
 ## Idees futures
 - [ ] Ajout de modes de difficulte supplementaires
 - [ ] Nouveaux defis saisonniers
+
+## Audit du 27/11/2026
+
+- [ ] Rendre les objets du décor focalisables au clavier, ou documenter une jouabilité souris/tactile uniquement.

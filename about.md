@@ -3,7 +3,7 @@
 **Manoir Valombre : La Lanterne Perdue** est un escape game / point and click developpe par **Geoffroy Streit** (alias **Hylst**).
 
 ## Le jeu
-Une aventure point and click immersive d'Halloween. Explore les pièces ténébreuses du manoir avec ta lanterne de citrouille, inspecte les objets suspects et résous les énigmes pour fuir.
+Une aventure point and click immersive d'Halloween. Explore le salon ténébreux du manoir avec ta lanterne de citrouille, inspecte les objets suspects et résous les énigmes pour fuir.
 
 ## Le createur
 - Developpeur d'applications, ancien graphiste et compositeur
